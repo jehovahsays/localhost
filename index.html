@@ -101,7 +101,7 @@
     <label for="menu-toggle" class="hamburger"></label>
 
     <nav>
-	    <a href="#search" onclick="document.getElementById('menu-toggle').checked = false">#search</a>
+	    <a href="#main" onclick="document.getElementById('menu-toggle').checked = false">#main</a>
         <a href="#about" onclick="document.getElementById('menu-toggle').checked = false">#about</a>
         <a href="#terms" onclick="document.getElementById('menu-toggle').checked = false">#terms</a>
         <a href="#privacy" onclick="document.getElementById('menu-toggle').checked = false">#privacy</a>
@@ -134,9 +134,9 @@
             <a href="#" class="close-btn">close article</a>
         </article>
 		
-	    <article id="search">
-            <h2>Search</h2>
-            <a href="./index.htm#search" class="close-btn">
+	    <article id="main">
+            <h2>main</h2>
+            <a href="./index.htm#main" class="close-btn">
 			Turn on Javascript</a><br>
         </article>		
     </main>
@@ -183,8 +183,8 @@ if (window.location.pathname.endsWith('.html') || window.location.pathname.endsW
 // Add to the script block in index.html
 window.addEventListener('load', () => {
     // If user lands on index.html without a hash, force them to the splash gate
-    if (!window.location.hash || window.location.hash === '#search') {
-        window.location.hash = 'search';
+    if (!window.location.hash || window.location.hash === '#main') {
+        window.location.hash = 'main';
         // Optional: Add a subtle console log for the AI's internal state
         console.log("External Conscious Initialized.");
     }
