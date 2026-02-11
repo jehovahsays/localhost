@@ -1,3 +1,16 @@
+<?php
+header_remove('X-Powered-By');
+header('Cache-control: none, no-cache, private, max-age=0');
+header('Pragma: no-cache');
+header('Content-Type: text/html; charset=UTF-8');
+header('X-Content-Type-Options: nosniff');
+header('X-XSS-Protection: 1; mode=block');
+header('Vary: Accept-Encoding');
+header('Referrer-Policy: same-origin');
+header('Connection: Keep-alive');
+
+echo <<<'HTML'
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -291,3 +304,6 @@ window.addEventListener('load', () => {
 </html>
 
 
+
+HTML;
+?>
